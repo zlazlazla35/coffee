@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'Ownglyph_StudyHard-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_StudyHard-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+/* /styles/reset.css */
+body {font-family: 'Ownglyph_StudyHard-Rg' !important;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input:focus {outline: none;}
+a {text-decoration: none; color: inherit;}
+
+input {font-family: 'NanumSquare', sans-serif !important;}
+textarea {font-family: 'NanumSquare', sans-serif !important; outline: none !important; resize: none !important;}
+select {font-family: 'NanumSquare', sans-serif !important; outline: none !important;}
+
+.nav_bar {width: 100%; max-width: 720px; margin: 0 auto;}
+.nav_bar .nav_bar_top {width: 100%; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; padding: 10px 0; }
+.nav_bar .nav_bar_top .logo {font-size: 24px; }
+.nav_bar .nav_bar_top .userBox {display: flex; align-items: center; width: 50%; justify-content: flex-end;} 
+.nav_bar .nav_bar_top .userBox a {width: 100%;  max-width: 74px; font-size: 20px; text-align: center;}
+.nav_bar .nav_bar_top .userBox .userLogin{font-size: 18px; margin-right: 10px;}
+.nav_bar .nav_bar_top .userBox button {width: 100%; max-width: 22px; display: block; background: none; border: none; padding: 0;}
+.nav_bar .nav_bar_top .userBox button {margin-right: 20px;}
+.nav_bar .nav_bar_top .userBox button svg {font-size: 20px;}
+.nav_bar .nav_bar_top .userBox button:last-child {margin-right: 0;}
+.nav_bar .nav_bar_top .userBox button.loginBtn {width: 100%;  max-width: 74px; font-size: 20px; font-family: 'Ownglyph_StudyHard-Rg' !important;}
+.nav_bar .nav_bar_bottom {width: 100%; }
+.nav_bar .nav_bar_bottom .nav_list {display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; padding: 10px 0; border-bottom: 1px solid #ddd;}
+.nav_bar .nav_bar_bottom .nav_list li { font-size: 18px; color: #232323; }
+.nav_bar .nav_bar_bottom .nav_list li a.active {color: #8b6d4e; }
+
+
+.liset_page {width: 100%; max-width: 720px; margin: 0 auto;}
+.liset_page .top_border {width: 100%; max-width: 650px; border: 2px solid #8b6d4e; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 16px; box-sizing: border-box; padding: 4px; margin: 20px auto 30px;}
+.liset_page .tag {width: 100%;}
+.liset_page .tag .tag_list {width: 100%; display: flex; align-items: center; white-space: nowrap; overflow-x: scroll;}
+.liset_page .tag .tag_list::-webkit-scrollbar {height: 8px;}
+.liset_page .tag .tag_list::-webkit-scrollbar-thumb {background: #a89f96; border-radius: 10px; }
+.liset_page .tag .tag_list::-webkit-scrollbar-track {background: rgba(123, 87, 8, 0.1); }
+.liset_page .tag .tag_list li {background: #ddd; font-size: 16px; box-sizing: border-box; padding: 4px 8px; border-radius: 12px; margin-right: 10px; cursor: pointer;}
+.liset_page .tag .tag_list li:last-child {margin-right: 0;}
+.liset_page .tag .tag_list li.on {background: #8b6d4e; color: #fff;}
+.liset_page .filterBox {width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.liset_page .filterBox .filterSelectBox {display: flex; position: relative; border: 1px solid #8f8f8f; border-radius: 10px; width: 100%; max-width: 69px; height: 28px; align-items: center; justify-content: center; margin: 20px 0; cursor: pointer;} 
+.liset_page .filterBox .filterSelectBox .title {font-size: 16px; color: #8f8f8f;}
+.liset_page .filterBox .filterSelectBox .title svg {font-size: 14px; margin-left: 4px;}
+.liset_page .filterBox .filterSelectBox .filterSelect {position: absolute; left: 50%; top: 34px; width: 100%; transform: translateX(-50%); border-radius: 8px; overflow: hidden; background: #fff; z-index: 999;}
+.liset_page .filterBox .filterSelectBox .filterSelect {width: 100%; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);}
+.liset_page .filterBox .filterSelectBox .filterSelect li {width: 100%; text-align: center; box-sizing: border-box; padding: 6px 0; border-bottom: 1px solid #ddd; font-size: 16px; color: #8f8f8f;}
+.liset_page .filterBox .tag_reset{display: inline-block; box-sizing: border-box; padding: 4px; border: 1px solid #8f8f8f; background: none; color: #8f8f8f; font-size: 14px; border-radius: 10px;}
+
+
+.liset_page .list_card {width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #232323; border-radius: 12px; margin-bottom: 40px; cursor: pointer;}
+.liset_page .list_card .list_card_top {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
+.liset_page .list_card .list_card_top .title {display: inline-block; box-sizing: border-box; padding: 6px 16px; font-size: 14px; background: #8b6d4e; color: #fff; border-radius: 4px;}
+.liset_page .list_card .list_card_top .bookIcon {display: inline-block;}
+.liset_page .list_card .list_card_top .bookIcon svg {font-size: 20px;}
+.liset_page .list_card .userText {width: 100%;}
+.liset_page .list_card .userText .userTitle {font-size: 20px; font-weight: 600; margin-bottom: 4px;}
+.liset_page .list_card .userText .userId {font-size: 14px; color: #a2a2a2;}
+.liset_page .list_card .userText .text {margin-top: 40px; font-size: 18px; white-space:pre-wrap ; text-overflow: ellipsis;    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
+.liset_page .list_card .list_card_bottom {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 40px;}
+.liset_page .list_card .list_card_bottom .tag {display: flex; align-items: center;}
+.liset_page .list_card .list_card_bottom .tag li {font-size: 16px; margin-right: 10px; color: #8b6d4e;}
+.liset_page .list_card .list_card_bottom .comment {display: flex; align-items: center; justify-content: flex-end; font-size: 16px; color: #a2a2a2;}
+.liset_page .list_card .list_card_bottom .comment  svg {font-size: 20px; margin-right: 4px; color: #8b6d4e;}
+
+
+
+.writing {width: 100%; max-width: 720px; margin: 0 auto; text-align: center; overflow: hidden;}
+.writing .title {font-size: 24px; margin: 20px 0 40px;}
+.writing {width: 100%;}
+.writing input {width: 100%; height: 40px; box-sizing: border-box; padding: 10px; font-size: 16px;  border-radius: 8px; border: 1px solid #a2a2a2;}
+.writing .bottom_butBox {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 70px;}
+.writing button.complete {width: calc(70% - 10px); height: 40px; background: #8b6d4e; color: #fff; font-size: 16px; border: none; border-radius: 8px; }
+.writing button.back {width: 30%;  height: 40px; background: #ddd; color: #757575; font-size: 16px; border: none; border-radius: 8px; margin-right: 10px;}
+.writing select {width: 100%; height: 40px; box-sizing: border-box; padding: 10px; font-size: 16px; margin: 10px 0; border-radius: 8px; border: 1px solid #a2a2a2;}
+.writing textarea {width: 100%; height: 400px; box-sizing: border-box; padding: 10px; font-size: 16px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #a2a2a2;}
+.writing .keyWord_box {position: relative; margin-bottom: 10px;}
+.writing .keyWord_box .keyWord_btn{position: absolute; right: 10px; top: 50%; transform: translateY(-50%); margin: 0; padding: 4px 8px; background: #8b6d4e; color: #fff; font-size: 14px; border: none; border-radius: 4px;}
+.writing .keyWord_tag {width: 100%; float: left; }
+.writing .keyWord_tag li { float: left; display: inline-block; border: 1px solid #868380; color: #868380; box-sizing: border-box; padding: 4px 10px; border-radius: 12px; margin-right: 6px; font-size: 14px; margin-bottom: 6px; cursor: pointer;}
+.writing .keyWord_tag li:last-child {margin-right: 0;}
+.writing .keyWord_tag li svg {font-size: 12px; margin-left: 4px;}
+
+
+
+.detail {width: 100%; max-width: 720px; margin: 0 auto; overflow: hidden;}
+.detail .detail_inner {width: 100%;}
+.detail .detail_inner .backBtn {width: 100%; margin: 40px 0; max-width: 18px;}
+.detail .detail_inner .contents {width: 100%;}
+.detail .detail_inner .contents .tagList {width: 100%; display: flex; align-items: center;}
+
+.detail .detail_inner .contents .contents_top {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px;}
+.detail .detail_inner .contents .contents_top .caregory {font-size: 18px; background: #8b6d4e; color: #fff;  box-sizing: border-box; padding: 4px 10px; border-radius: 4px;}
+.detail .detail_inner .contents .contents_top svg {width: 100%; max-width: 18px;}
+.detail .detail_inner .contents .title {font-size: 22px; margin-bottom: 12px;}
+.detail .detail_inner .contents .dateBox {width: 100%; display: flex; align-items: center; }
+.detail .detail_inner .contents .dateBox .userName { font-size: 16px; color: #a2a2a2; margin-right: 10px;}
+.detail .detail_inner .contents .dateBox .date {font-size: 16px; color: #a2a2a2; margin-right: 10px;}
+.detail .detail_inner .contents .dateBox .date:last-child {margin-right: 0;}
+.detail .detail_inner .contents .contentText {width: 100%; height: 400px; margin: 60px 0;}
+
+.detail .comment {width: 100%;}
+.detail .comment .comment_writing {width: 100%; display: flex; align-items: center;}
+.detail .comment .comment_writing .commentWriting {width: calc(80% - 10px); height: 74px; margin: 0; box-sizing: border-box; padding: 10px;}
+.detail .comment .comment_writing button {width: 20%; margin-left: 10px; background: #8b6d4e; border: none; height: 74px; font-size: 16px; color: #fff; border-radius: 4px;}
+.detail .comment .commit_list {width: 100%; margin-top: 60px;}
+.detail .comment .commit_list li {width: 100%; box-sizing: border-box; padding: 40px 0; border-bottom: 1px solid #ddd;}
+.detail .comment .commit_list li .commit {width: 100%;}
+.detail .comment .commit_list li .commit .user_info_box {width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.detail .comment .commit_list li .commit .user_info_box .user_info {width: 80%; display: flex; align-items: center;}
+.detail .comment .commit_list li .commit .user_info_box .user_info .user_profile {display: inline-block;}
+.detail .comment .commit_list li .commit .user_info_box .user_info .user_id {display: inline-block; line-height: 1.3;}
+.detail .comment .commit_list li .commit .user_info_box .user_info .user_id .id {font-size: 16px;}
+.detail .comment .commit_list li .commit .user_info_box .user_info .user_id .date {display: flex; align-items: center;}
+.detail .comment .commit_list li .commit .user_info_box .user_info .user_id .date span {display: inline-block; margin-right: 10px;}
+.detail .comment .commit_list li .commit .user_info_box .user_info .user_id .date span:last-child {margin-right: 0;}
+.detail .comment .commit_list li .commit .user_info_box .btnBox {display: flex; align-items: center; width: 20%; justify-content: flex-end;}
+.detail .comment .commit_list li .commit .user_info_box .btnBox button {width: 100%; max-width: 120px; height: 30px; border-radius: 4px; font-size: 12px; background: #8b6d4e; border: none; color: #fff;}
+.detail .comment .commit_list li .commit .user_info_box .btnBox button.delete {background: rgb(142, 4, 4); margin-left: 4px;}
+.detail .comment .commit_text {width: 100%; font-size: 16px; margin-top: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Ownglyph_StudyHard-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_StudyHard-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* /styles/reset.css */
+body {font-family: 'Ownglyph_StudyHard-Rg' !important;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input:focus {outline: none;}
+a {text-decoration: none; color: inherit;}
+
+
+.nav_bar {width: 100%; max-width: 720px; margin: 0 auto;}
+.nav_bar .nav_bar_top {width: 100%; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; padding: 10px 0; }
+.nav_bar .nav_bar_top .logo {font-size: 24px; }
+.nav_bar .nav_bar_top .userBox {display: flex; align-items: center;} 
+.nav_bar .nav_bar_top .userBox button {width: 22px; display: block; background: none; border: none; padding: 0;}
+.nav_bar .nav_bar_top .userBox button {margin-right: 20px;}
+.nav_bar .nav_bar_top .userBox button:last-child {margin-right: 0;}
+.nav_bar .nav_bar_bottom {width: 100%; }
+.nav_bar .nav_bar_bottom .nav_list {display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; padding: 10px 0; border-bottom: 1px solid #ddd;}
+.nav_bar .nav_bar_bottom .nav_list li { font-size: 18px; color: #232323; }
+.nav_bar .nav_bar_bottom .nav_list li a.active {color: #8b6d4e; }
+
+
+.liset_page {width: 100%; max-width: 720px; margin: 0 auto;}
+.liset_page .top_border {width: 100%; max-width: 650px; border: 2px solid #8b6d4e; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 16px; box-sizing: border-box; padding: 4px; margin: 20px 0 30px;}
+.liset_page .tag {width: 100%;}
+.liset_page .tag .tag_list {width: 100%; display: flex; align-items: center; white-space: nowrap; overflow-x: scroll;}
+.liset_page .tag .tag_list::-webkit-scrollbar {height: 8px;}
+.liset_page .tag .tag_list::-webkit-scrollbar-thumb {background: #a89f96; border-radius: 10px; }
+.liset_page .tag .tag_list::-webkit-scrollbar-track {background: rgba(123, 87, 8, 0.1); }
+.liset_page .tag .tag_list li {background: #ddd; font-size: 16px; box-sizing: border-box; padding: 4px 8px; border-radius: 12px; margin-right: 10px; cursor: pointer;}
+.liset_page .tag .tag_list li:last-child {margin-right: 0;}
+.liset_page .tag .tag_list li.on {background: #8b6d4e; color: #fff;}
+.liset_page .filterBox {width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.liset_page .filterBox .filterSelectBox {display: flex; position: relative; border: 1px solid #8f8f8f; border-radius: 10px; width: 100%; max-width: 69px; height: 28px; align-items: center; justify-content: center; margin: 20px 0; cursor: pointer;} 
+.liset_page .filterBox .filterSelectBox .title {font-size: 16px; color: #8f8f8f;}
+.liset_page .filterBox .filterSelectBox .title svg {font-size: 14px; margin-left: 4px;}
+.liset_page .filterBox .filterSelectBox .filterSelect {position: absolute; left: 50%; top: 34px; width: 100%; transform: translateX(-50%); border-radius: 8px; overflow: hidden;}
+.liset_page .filterBox .filterSelectBox .filterSelect {width: 100%; box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);}
+.liset_page .filterBox .filterSelectBox .filterSelect li {width: 100%; text-align: center; box-sizing: border-box; padding: 6px 0; border-bottom: 1px solid #ddd; font-size: 16px; color: #8f8f8f;}
+.liset_page .filterBox .tag_reset{display: inline-block; box-sizing: border-box; padding: 4px; border: 1px solid #8f8f8f; background: none; color: #8f8f8f; font-size: 14px; border-radius: 10px;}
+
+
+.liset_page .list_card {width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #232323; border-radius: 12px; margin-bottom: 40px;}
+.liset_page .list_card .list_card_top {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;}
+.liset_page .list_card .list_card_top .title {display: inline-block; box-sizing: border-box; padding: 6px 16px; font-size: 14px; background: #8b6d4e; color: #fff; border-radius: 4px;}
+.liset_page .list_card .list_card_top .bookIcon {display: inline-block;}
+.liset_page .list_card .list_card_top .bookIcon svg {font-size: 20px;}
+
+.liset_page .list_card .userText {width: 100%;}
+.liset_page .list_card .userText .userTitle {font-size: 20px; font-weight: 600; margin-bottom: 4px;}
+.liset_page .list_card .userText .userId {font-size: 14px; color: #525252;}
+.liset_page .list_card .userText .text {margin-top: 40px; font-size: 18px; white-space:pre-wrap ; text-overflow: ellipsis;    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
+
+.liset_page .list_card .list_card_bottom {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 40px;}
+.liset_page .list_card .list_card_bottom .tag {display: flex; align-items: center;}
+.liset_page .list_card .list_card_bottom .tag li {font-size: 16px; margin-right: 10px; color: #8b6d4e;}
+.liset_page .list_card .list_card_bottom .comment {display: flex; align-items: center; justify-content: flex-end; font-size: 16px; color: #525252;}
+.liset_page .list_card .list_card_bottom .comment  svg {font-size: 20px; margin-right: 8px; color: #8b6d4e;}
+
+
+
+
+
+
