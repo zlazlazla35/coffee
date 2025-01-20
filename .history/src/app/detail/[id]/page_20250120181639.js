@@ -21,12 +21,16 @@ export default async function Detail(props) {
     const session = await getServerSession(authOptions);
     let resultName = await db.collection('list').findOne({ _id: new ObjectId(urlId.id) });
     let keyWordNum = resultName.keyword;
+
+
     let useName = session;
 
 
-    if (session !== null) {
+    if(session !== null){
         useName = session.user.name;
     }
+    //로그인 되어있는 아이디
+    console.log(useName == resultName.userId);
 
 
 
@@ -62,14 +66,10 @@ export default async function Detail(props) {
                             </ul>
                             : null
                     }
-                    {
-                        useName == resultName.userId
-                            ? <div className='btn_box'>
-                                <Link href={`/modify/${urlId.id}`}>수정</Link>
-                                <ListDelete urlId={urlId.id} />
-                            </div>
-                            : null
-                    }
+                    <div className='btn_box'>
+                        <Link href={`/modify/${urlId.id}`}>수정</Link>
+                        <ListDelete urlId={urlId.id} />
+                    </div>
                 </div>
             </div>
             <div className='comment'>

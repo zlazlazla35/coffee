@@ -1,14 +1,11 @@
 'use client'
 
-import { useRouter } from 'next/navigation';
 import { useState } from "react"
 
 export default function join() {
     let [userName, setUserName] = useState('');
     let [userEmail, setUserEmail] = useState('');
     let [userPaw, setUserPaw] = useState('');
-
-    const router = useRouter();
 
     return (
         <div className="join">
@@ -23,8 +20,8 @@ export default function join() {
                 setUserPaw(e.target.value)
             }} />
             <div className="btnBox">
-                <button className="back" onClick={(()=>{ router.back() })}>취소</button>
-                <button className="join" type="submit" onClick={() =>
+                <button>취소</button>
+                <button type="submit" onClick={() =>
                     fetch('/api/auth/join', {
                         method: 'POST',
                         body: JSON.stringify({ name: userName, email: userEmail, password: userPaw })

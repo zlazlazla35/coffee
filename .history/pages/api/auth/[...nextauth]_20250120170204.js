@@ -29,6 +29,8 @@ export const authOptions = {
       },
 
       //2. 로그인요청시 실행되는코드
+      //직접 DB에서 아이디,비번 비교하고 
+      //아이디,비번 맞으면 return 결과, 틀리면 return null 해야함
       async authorize(credentials) {
         let db = (await connectDB).db('coffee');
         let user = await db.collection('user_cred').findOne({ email: credentials.email })
@@ -62,7 +64,7 @@ export const authOptions = {
       }
       return token;
     },
-    //4. 유저 세션이 조회될 때 마다 실행되는 코드
+    //5. 유저 세션이 조회될 때 마다 실행되는 코드
     session: async ({ session, token }) => {
       session.user = token.user;
       return session;

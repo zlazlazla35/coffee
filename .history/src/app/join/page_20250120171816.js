@@ -23,7 +23,7 @@ export default function join() {
                 setUserPaw(e.target.value)
             }} />
             <div className="btnBox">
-                <button className="back" onClick={(()=>{ router.back() })}>취소</button>
+                <button className="back">취소</button>
                 <button className="join" type="submit" onClick={() =>
                     fetch('/api/auth/join', {
                         method: 'POST',

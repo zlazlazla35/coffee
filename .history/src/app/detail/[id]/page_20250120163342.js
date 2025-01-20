@@ -8,8 +8,6 @@ import BackBtn from '@/app/component/BackBtn'
 import ModifyDeleteBtn from '@/app/component/ModifyDeleteBtn'
 import Link from 'next/link'
 import ListDelete from '@/app/component/ListDelete'
-import { getServerSession } from 'next-auth'
-import { authOptions } from '../../../../pages/api/auth/[...nextauth]'
 
 
 export default async function Detail(props) {
@@ -17,20 +15,11 @@ export default async function Detail(props) {
     let urlId = await props.params
 
     const client = await connectDB;
-    const db = client.db("coffee");
-    const session = await getServerSession(authOptions);
+    const db = client.db("coffee")
+
     let resultName = await db.collection('list').findOne({ _id: new ObjectId(urlId.id) });
     let keyWordNum = resultName.keyword;
-    let useName = session;
-
-
-    if (session !== null) {
-        useName = session.user.name;
-    }
-
-
-
-
+    
     return (
         <div className="detail">
             <div className="detail_inner">
@@ -62,14 +51,10 @@ export default async function Detail(props) {
                             </ul>
                             : null
                     }
-                    {
-                        useName == resultName.userId
-                            ? <div className='btn_box'>
-                                <Link href={`/modify/${urlId.id}`}>수정</Link>
-                                <ListDelete urlId={urlId.id} />
-                            </div>
-                            : null
-                    }
+                    <div className='btn_box'>
+                        <Link href={`/modify/${urlId.id}`}>수정</Link>
+                        <ListDelete urlId={urlId.id} />
+                    </div>
                 </div>
             </div>
             <div className='comment'>

@@ -18,19 +18,19 @@ export default async function Detail(props) {
 
     const client = await connectDB;
     const db = client.db("coffee");
-    const session = await getServerSession(authOptions);
+
     let resultName = await db.collection('list').findOne({ _id: new ObjectId(urlId.id) });
     let keyWordNum = resultName.keyword;
-    let useName = session;
+
+    const session = await getServerSession(authOptions);
 
 
-    if (session !== null) {
-        useName = session.user.name;
+
+    if(session !== null){
+        console.log(session)
+        const useName = session.name
     }
-
-
-
-
+    
     return (
         <div className="detail">
             <div className="detail_inner">
@@ -62,14 +62,10 @@ export default async function Detail(props) {
                             </ul>
                             : null
                     }
-                    {
-                        useName == resultName.userId
-                            ? <div className='btn_box'>
-                                <Link href={`/modify/${urlId.id}`}>수정</Link>
-                                <ListDelete urlId={urlId.id} />
-                            </div>
-                            : null
-                    }
+                    <div className='btn_box'>
+                        <Link href={`/modify/${urlId.id}`}>수정</Link>
+                        <ListDelete urlId={urlId.id} />
+                    </div>
                 </div>
             </div>
             <div className='comment'>

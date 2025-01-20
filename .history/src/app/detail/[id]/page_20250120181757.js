@@ -21,6 +21,8 @@ export default async function Detail(props) {
     const session = await getServerSession(authOptions);
     let resultName = await db.collection('list').findOne({ _id: new ObjectId(urlId.id) });
     let keyWordNum = resultName.keyword;
+
+
     let useName = session;
 
 

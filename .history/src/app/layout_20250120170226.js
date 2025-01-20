@@ -33,6 +33,8 @@ export default async function RootLayout({ children }) {
 const loginData = await getServerSession(authOptions);
 
 
+
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

@@ -31,6 +31,8 @@ export default async function RootLayout({ children }) {
 
 
 const loginData = await getServerSession(authOptions);
+console.log(loginData)
+
 
 
   return (
