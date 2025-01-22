@@ -28,8 +28,6 @@ export default async function Detail(props) {
         useName = session.user.name;
     }
 
-
-
     return (
         <div className="detail">
             <div className="detail_inner">
@@ -94,14 +92,10 @@ export default async function Detail(props) {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {
-                                                        useName == data.userName
-                                                            ? <div className='modify_deleteBtn'>
-                                                                <button className='modify'>수정</button>
-                                                                <button className='delete'>삭제</button>
-                                                            </div>
-                                                            : null
-                                                    }
+                                                    <div className='modify_deleteBtn'>
+                                                        <button className='modify'>수정</button>
+                                                        <button className='delete'>삭제</button>
+                                                    </div>
                                                 </div>
                                                 <div className='commit_text'>
                                                     {data.comment}
@@ -114,6 +108,7 @@ export default async function Detail(props) {
                         </ul>
                         : null
                 }
+
             </div>
         </div>
     )

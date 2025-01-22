@@ -5,13 +5,16 @@ import ListCard from '../component/ListCard'
 import { connectDB } from '../../../utill/database';
 import Link from 'next/link';
 import { ObjectId } from 'mongodb';
-
+import CommentLenth from '../component/CommentLenth';
 
 
 export default async function List() {
     const client = await connectDB;
     const db = client.db('coffee');
     const result = await db.collection('list').find().toArray();
+    // let commentList = await db.collection('comment').find({ listId: urlId.id }).toArray();
+
+
 
 
     return (
@@ -50,6 +53,7 @@ export default async function List() {
                                     </ul>
                                     <div className="comment">
                                         <FontAwesomeIcon icon={faCommentDots} />
+                                        <CommentLenth listUlr={item}></CommentLenth>
                                     </div>
                                 </div>
                             </div>

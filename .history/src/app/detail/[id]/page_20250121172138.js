@@ -24,11 +24,10 @@ export default async function Detail(props) {
     let useName = session;
     let commentList = await db.collection('comment').find({ listId: urlId.id }).toArray();
 
+    console.log(commentList)
     if (session !== null) {
         useName = session.user.name;
     }
-
-
 
     return (
         <div className="detail">
@@ -73,47 +72,39 @@ export default async function Detail(props) {
             </div>
             <div className='comment'>
                 <Comment useName={useName} urlId={urlId} />
-                {
-                    commentList.length > 0
-                        ? <ul className='commit_list'>
-                            {
-                                commentList.map((data, i) => {
-                                    return (
-                                        <li key={i}>
-                                            <div className='commit'>
-                                                <div className='user_info_box'>
-                                                    <div className='user_info'>
-                                                        <div className='user_profile'>
-                                                            <Image src="/profile.png" alt="프로필 이미지" width={80} height={80} />
-                                                        </div>
-                                                        <div className='user_id'>
-                                                            <h4 className='id'>{data.userName}</h4>
-                                                            <div className='date'>
-                                                                <span>{data.date}</span>
-                                                                <span>{data.time}</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    {
-                                                        useName == data.userName
-                                                            ? <div className='modify_deleteBtn'>
-                                                                <button className='modify'>수정</button>
-                                                                <button className='delete'>삭제</button>
-                                                            </div>
-                                                            : null
-                                                    }
+                <ul className='commit_list'>
+                    {
+                        commentList.map((data, i) => {
+                            return (
+                                <li key={i}>
+                                    <div className='commit'>
+                                        <div className='user_info_box'>
+                                            <div className='user_info'>
+                                                <div className='user_profile'>
+                                                    <Image src="/profile.png" alt="프로필 이미지" width={80} height={80} />
                                                 </div>
-                                                <div className='commit_text'>
-                                                    {data.comment}
+                                                <div className='user_id'>
+                                                    <h4 className='id'>유저아이디</h4>
+                                                    <div className='date'>
+                                                        <span>2024-03-12</span>
+                                                        <span>23:20</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                    )
-                                })
-                            }
-                        </ul>
-                        : null
-                }
+                                            <div className='modify_deleteBtn'>
+                                                <button className='modify'>수정</button>
+                                                <button className='delete'>삭제</button>
+                                            </div>
+                                        </div>
+                                        <div className='commit_text'>
+                                            댓글 내용 적혀있는 곳
+                                        </div>
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
             </div>
         </div>
     )

@@ -4,15 +4,12 @@ import { faBookmark, faCommentDots } from '@fortawesome/free-regular-svg-icons'
 import ListCard from '../component/ListCard'
 import { connectDB } from '../../../utill/database';
 import Link from 'next/link';
-import { ObjectId } from 'mongodb';
-
 
 
 export default async function List() {
     const client = await connectDB;
     const db = client.db('coffee');
     const result = await db.collection('list').find().toArray();
-
 
     return (
         <div className="liset_page">
@@ -21,7 +18,8 @@ export default async function List() {
             </div>
             <ListCard></ListCard>
             {
-                await result.map((item, i) => {
+                result.map((item, i) => {
+                    console.log(item._id)
                     return (
                         <Link href={`/detail/${item._id}`} key={i}>
                             <div className="list_card" >
@@ -50,6 +48,7 @@ export default async function List() {
                                     </ul>
                                     <div className="comment">
                                         <FontAwesomeIcon icon={faCommentDots} />
+                                        1
                                     </div>
                                 </div>
                             </div>

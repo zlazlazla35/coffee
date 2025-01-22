@@ -19,7 +19,7 @@ export default async function List() {
             <div className="top_border">
                 ☕서로 따듯한 이야기 부탁드립니다.☕
             </div>
-            <ListCard></ListCard>
+            {/* <ListCard></ListCard> */}
             {
                 await result.map((item, i) => {
                     return (

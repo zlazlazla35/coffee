@@ -24,11 +24,10 @@ export default async function Detail(props) {
     let useName = session;
     let commentList = await db.collection('comment').find({ listId: urlId.id }).toArray();
 
+    console.log(commentList.length)
     if (session !== null) {
         useName = session.user.name;
     }
-
-
 
     return (
         <div className="detail">
@@ -74,7 +73,7 @@ export default async function Detail(props) {
             <div className='comment'>
                 <Comment useName={useName} urlId={urlId} />
                 {
-                    commentList.length > 0
+                    commentList
                         ? <ul className='commit_list'>
                             {
                                 commentList.map((data, i) => {
@@ -94,14 +93,10 @@ export default async function Detail(props) {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    {
-                                                        useName == data.userName
-                                                            ? <div className='modify_deleteBtn'>
-                                                                <button className='modify'>수정</button>
-                                                                <button className='delete'>삭제</button>
-                                                            </div>
-                                                            : null
-                                                    }
+                                                    <div className='modify_deleteBtn'>
+                                                        <button className='modify'>수정</button>
+                                                        <button className='delete'>삭제</button>
+                                                    </div>
                                                 </div>
                                                 <div className='commit_text'>
                                                     {data.comment}
@@ -114,6 +109,7 @@ export default async function Detail(props) {
                         </ul>
                         : null
                 }
+
             </div>
         </div>
     )

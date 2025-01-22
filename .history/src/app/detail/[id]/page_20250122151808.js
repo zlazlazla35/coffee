@@ -102,6 +102,7 @@ export default async function Detail(props) {
                                                             </div>
                                                             : null
                                                     }
+
                                                 </div>
                                                 <div className='commit_text'>
                                                     {data.comment}
@@ -114,6 +115,7 @@ export default async function Detail(props) {
                         </ul>
                         : null
                 }
+
             </div>
         </div>
     )

@@ -149,16 +149,15 @@ select {font-family: 'NanumSquare', sans-serif !important; outline: none !import
 .detail .detail_inner .contents .contentText {width: 100%;  margin: 60px 0; white-space: pre-wrap; line-height: 1.3;}
 
 .detail .comment {width: 100%;}
-.detail .comment .comment_writing {width: 100%; display: flex; align-items: center; margin-bottom: 60px;}
+.detail .comment .comment_writing {width: 100%; display: flex; align-items: center;}
 .detail .comment .comment_writing .commentWriting {width: calc(80% - 10px); height: 74px; margin: 0; box-sizing: border-box; padding: 10px;}
 .detail .comment .comment_writing button {width: 20%; margin-left: 10px; background: #8b6d4e; border: none; height: 74px; font-size: 16px; color: #fff; border-radius: 4px;}
-.detail .comment .commit_list {width: 100%;}
+.detail .comment .commit_list {width: 100%; margin-top: 60px;}
 .detail .comment .commit_list li {width: 100%; box-sizing: border-box; padding: 40px 0; border-bottom: 1px solid #ddd;}
 .detail .comment .commit_list li .commit {width: 100%;}
 .detail .comment .commit_list li .commit .user_info_box {width: 100%; display: flex; align-items: center; justify-content: space-between;}
 .detail .comment .commit_list li .commit .user_info_box .user_info {width: 80%; display: flex; align-items: center;}
 .detail .comment .commit_list li .commit .user_info_box .user_info .user_profile {display: inline-block;}
-.detail .comment .commit_list li .commit .user_info_box .user_info .user_profile img {display: block;}
 .detail .comment .commit_list li .commit .user_info_box .user_info .user_id {display: inline-block; line-height: 1.3;}
 .detail .comment .commit_list li .commit .user_info_box .user_info .user_id .id {font-size: 16px;}
 .detail .comment .commit_list li .commit .user_info_box .user_info .user_id .date {display: flex; align-items: center;}
@@ -170,7 +169,7 @@ select {font-family: 'NanumSquare', sans-serif !important; outline: none !import
 .detail .comment .commit_text {width: 100%; font-size: 16px; margin-top: 20px;}
 .detail .detail_inner .contents .btn_box {width: 100%; display: flex; align-items: center; justify-content: flex-end; margin-bottom: 20px; font-family: 'NanumSquare', sans-serif !important;}
 .detail .detail_inner .contents .btn_box button{ background: none; border: none; font-size: 14px; color: #a2a2a2; font-weight: 800; font-family: 'NanumSquare', sans-serif !important; padding: 0;}
-.detail .detail_inner .contents .btn_box a { background: none; border: none; font-size: 14px; color: #a2a2a2; font-weight: 800; margin-right: 20px;}
+.detail .detail_inner .contents .btn_box a { background: none; border: none; font-size: 14px; color: #a2a2a2; font-weight: 800;}
 
 
 .join {width: 100%; max-width: 720px; margin: 0 auto;}
